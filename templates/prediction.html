@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Flask Login App</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="prediction">
+        <h1>PREDICTIONS</h1>
+        <table>
+            {% for item in data %}
+            <tr>
+               <td>{{item.REASON}}</td>
+               <td>{{item.PROBABILITY}}</td>
+            </tr>
+            {% endfor %}
+        </table> 
+        <br>
+        <br>
+
+        <div class="RECOMMENDATION">
+            <h4style="text-align: left">FOR RECOMMENDATION OF DRUGS:</h1>
+            <div class="form">
+                <form action="/recommendation" method="POST">
+                    <input type="submit" value="Enter">
+                </form>
+            </div>
+        </div>
+        
+            
+       
+    </div>
+</body>
+</html>
+
+
+
+

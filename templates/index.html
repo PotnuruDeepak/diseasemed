@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Flask Login App</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1>WELCOME TO RECOMMENDATION SYSTEM FOR MEDICINES</h1>
+        <h3>PLEASE CHOOSE YOUR SYMPTONS </h3>
+        <table>
+            <tr>
+                <td>1</td><td>itching
+                <td>2</td><td>skin_rash</td>
+                <td>3</td><td>nodal_skin_eruptions</td>
+                <td>4</td><td>continuous_sneezing</td>
+                <td>5</td><td>shivering</td>
+            </tr>
+            <tr>
+                 <td>6</td><td>chills</td> 
+                 <td>7</td><td>joint_pain</td> 
+                 <td>8</td><td>stomach_pain</td> 
+                 <td>9</td><td>acidity</td> 
+                 <td>10</td><td>ulcers_on_tongue</td> 
+            </tr>
+            <tr>
+            
+                 <td>11</td><td>muscle_wasting</td> 
+                 <td>12</td><td>vomiting</td> 
+                 <td>13</td><td>burning_micturition</td> 
+                <td>14</td><td>spotting_ urination</td> 
+                 <td>15</td><td>fatigue</td> 
+            </tr>
+            <tr>
+        
+                 <td>16</td><td>weight_gain</td> 
+                 <td>17</td><td>anxiety</td> 
+                 <td>18</td><td>cold_hands_and_feets</td> 
+                 <td>19</td><td>mood_swings</td> 
+                 <td>20</td><td>weight_loss</td> 
+            </tr>
+            <tr>
+        
+                 <td>21</td><td>restlessness</td> 
+                 <td>22</td><td>lethargy</td> 
+                 <td>23</td><td>patches_in_throat</td> 
+                 <td>24</td><td>irregular_sugar_level</td> 
+                 <td>25</td><td>cough</td> 
+            </tr>
+            <tr>
+                 <td>26</td><td>high_fever</td> 
+                 <td>27</td><td>sunken_eyes</td> 
+                 <td>28</td><td>breathlessness</td> 
+                 <td>29</td><td>sweating</td> 
+                 <td>30</td><td>dehydration</td> 
+            </tr>
+            <tr>
+                 <td>31</td><td>indigestion</td> 
+                 <td>32</td><td>headache</td> 
+                 <td>33</td><td>yellowish_skin</td> 
+                 <td>34</td><td>dark_urine</td> 
+                 <td>35</td><td>nausea</td> 
+            </tr>
+            <tr>
+                 <td>36</td><td>loss_of_appetite</td> 
+                 <td>37</td><td>pain_behind_the_eyes</td> 
+                 <td>38</td><td>back_pain</td> 
+                 <td>39</td><td>constipation</td> 
+                 <td>40</td><td>abdominal_pain</td> 
+            </tr>
+            <tr>
+                 <td>41</td><td>diarrhoea</td> 
+                 <td>42</td><td>mild_fever</td> 
+                 <td>43</td><td>yellow_urine</td> 
+                 <td>44</td><td>yellowing_of_eyes</td> 
+                 <td>45</td><td>acute_liver_failure</td> 
+            </tr>
+            <tr>
+                 <td>46</td><td>fluid_overload</td> 
+                 <td>47</td><td>swelling_of_stomach</td> 
+                 <td>48</td><td>swelled_lymph_nodes</td> 
+                 <td>49</td><td>malaise</td> 
+                 <td>50</td><td>blurred_and_distorted_vision</td> 
+            </tr>
+            <tr>
+                 <td>51</td><td>phlegm</td> 
+                 <td>52</td><td>throat_irritation</td> 
+                 <td>53</td><td>redness_of_eyes</td> 
+                 <td>54</td><td>sinus_pressure</td> 
+                 <td>55</td><td>runny_nose</td> 
+            </tr>
+            <tr>
+        
+                 <td>56</td><td>congestion</td> 
+                 <td>57</td><td>chest_pain</td> 
+                 <td>58</td><td>weakness_in_limbs</td> 
+                 <td>59</td><td>fast_heart_rate</td> 
+                 <td>60</td><td>pain_during_bowel_movements</td> 
+            </tr>
+            <tr>
+                 <td>61</td><td>pain_in_anal_region</td> 
+                 <td>62</td><td>bloody_stool</td> 
+                 <td>63</td><td>irritation_in_anus</td> 
+                 <td>64</td><td>neck_pain</td> 
+                 <td>65</td><td>dizziness</td> 
+            </tr>
+            <tr>
+        
+                 <td>66</td><td>cramps</td> 
+                 <td>67</td><td>bruising</td> 
+                 <td>68</td><td>obesity</td> 
+                 <td>69</td><td>swollen_legs</td> 
+                 <td>70</td><td>swollen_blood_vessels</td> 
+            </tr>
+            <tr>
+                 <td>71</td><td>puffy_face_and_eyes</td> 
+                 <td>72</td><td>enlarged_thyroid</td> 
+                 <td>73</td><td>brittle_nails</td> 
+                 <td>74</td><td>swollen_extremeties</td> 
+                 <td>75</td><td>excessive_hunger</td> 
+            </tr>
+            <tr>
+        
+                 <td>76</td><td>extra_marital_contacts</td> 
+                 <td>77</td><td>drying_and_tingling_lips</td> 
+                 <td>78</td><td>slurred_speech</td> 
+                 <td>79</td><td>knee_pain</td> 
+                 <td>80</td><td>hip_joint_pain</td> 
+            </tr>
+            <tr>
+                 <td>81</td><td>muscle_weakness</td> 
+                 <td>82</td><td>stiff_neck</td> 
+                 <td>83</td><td>swelling_joints</td> 
+                 <td>84</td><td>movement_stiffness</td> 
+                 <td>85</td><td>spinning_movements</td> 
+            </tr>
+            <tr>
+                 <td>86</td><td>loss_of_balance</td> 
+                 <td>87</td><td>unsteadiness</td> 
+                 <td>88</td><td>weakness_of_one_body_side</td> 
+                 <td>89</td><td>loss_of_smell</td> 
+                 <td>90</td><td>bladder_discomfort</td> 
+            </tr>
+            <tr>
+        
+                 <td>91</td><td>foul_smell_of urine</td> 
+                 <td>92</td><td>continuous_feel_of_urine</td> 
+                 <td>93</td><td>passage_of_gases</td> 
+                 <td>94</td><td>internal_itching</td> 
+                 <td>95</td><td>toxic_look_(typhos)</td> 
+            </tr>
+            <tr>
+                 <td>96</td><td>depression</td> 
+                 <td>97</td><td>irritability</td> 
+                 <td>98</td><td>muscle_pain</td> 
+                 <td>99</td><td>altered_sensorium</td> 
+                 <td>100</td><td>red_spots_over_body</td> 
+            </tr>
+            <tr>
+                 <td>101</td><td>belly_pain</td> 
+                 <td>102</td><td>abnormal_menstruation</td> 
+                 <td>103</td><td>dischromic _patches</td> 
+                 <td>104</td><td>watering_from_eyes</td> 
+                 <td>105</td><td>increased_appetite</td> 
+            </tr>
+            <tr>
+                 <td>106</td><td>polyuria</td> 
+                 <td>107</td><td>family_history</td> 
+                 <td>108</td><td>mucoid_sputum</td> 
+                 <td>109</td><td>rusty_sputum</td> 
+                 <td>110</td><td>lack_of_concentration</td> 
+            </tr>
+            <tr>
+        
+                 <td>111</td><td>visual_disturbances</td> 
+                 <td>112</td><td>receiving_blood_transfusion</td> 
+                 <td>113</td><td>receiving_unsterile_injections</td> 
+                 <td>114</td><td>coma</td> 
+                 <td>115</td><td>stomach_bleeding</td> 
+            </tr>
+            <tr>
+        
+                 <td>116</td><td>distention_of_abdomen</td> 
+                 <td>117</td><td>history_of_alcohol_consumption</td> 
+                 <td>118</td><td>fluid_overload.1</td> 
+                 <td>119</td><td>blood_in_sputum</td> 
+                 <td>120</td><td>prominent_veins_on_calf</td> 
+            </tr>
+            <tr>
+        
+                 <td>121</td><td>palpitations</td> 
+                 <td>122</td><td>painful_walking</td> 
+                 <td>123</td><td>pus_filled_pimples</td> 
+                 <td>124</td><td>blackheads</td> 
+                 <td>125</td><td>scurring</td> 
+            </tr>
+            <tr>
+        
+                 <td>126</td><td>skin_peeling</td> 
+                 <td>127</td><td>silver_like_dusting</td> 
+                 <td>128</td><td>small_dents_in_nails</td> 
+                 <td>129</td><td>inflammatory_nails</td> 
+                 <td>130</td><td>blister</td> 
+            </tr>
+            <tr>
+                 <td>131</td><td>red_sore_around_nose</td> 
+                 <td>132</td><td>yellow_crust_ooze</td> 
+            </tr>
+        </table> 
+        <br>
+        <br>
+        <div class="content">
+            <h4 style="text-align: left">ENTER THE SYMPTONS WHICH YOU ARE HAVING:</h1>
+            <h5>PLEASE ENTER THE NUMBERS OF YOUR SYMPTONS WITH SPACE SEPERATED</h5>
+            <p>like 1 for itching, 2 for skin rash and so on</p>
+            <div class="form">
+                <form action="/prediction" method="POST">
+                    <input type="text" name="content" id="content">
+                    <input type="submit" value="Enter">
+                </form>
+            </div>
+        </div>
+        <br>
+        <br>
+        <br>
+        <br>
+        
+        
+            
+       
+    </div>
+</body>
+</html>
+
+
+
+
